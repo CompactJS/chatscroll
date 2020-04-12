@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Test Page</title>
+  </head>
+  <body>
+    <style>
+      h1 {
+        text-align: center;
+      }
+      #container {
+        height: 500px;
+        max-width: 500px;
+        margin: 0 auto;
+        overflow: hidden;
+      }
+      .message {
+        position: relative;
+        height: 50px;
+        margin: 20px;
+        border: 1px solid black;
+        border-radius: 3px;
+        padding: 10px 15px;
+        line-height: 50px;
+        animation: fade 0.5s;
+      }
+      @keyframes fade {
+        from {
+          opacity: 0;
+          left: -500px;
+        }
+        to {
+          opacity: 1;
+          left: 0;
+        }
+      }
+    </style>
+    <h1>Example Chat</h1>
+    <div id="container"></div>
+    <script type="module">
+      import { observe } from '../src/index.js';
+      const container = document.getElementById('container');
+      observe(container);
+
+      const addMessage = (text) => {
+        const message = document.createElement('div');
+        message.className = 'message';
+        message.innerHTML = text;
+        container.appendChild(message);
+      };
+
+      setInterval((text) => {
+        addMessage(
+          'abcdefghijklmnopqrstuvwxyz'
+            .split('')
+            .sort(() => 0.5 - Math.random())
+            .filter(() => Math.random() < 0.3)
+            .join('')
+        );
+      }, 1000);
+    </script>
+  </body>
+</html>
