@@ -4,7 +4,7 @@
   <a href="https://www.npmjs.com/package/@compactjs/chatscroll" target="_blank">
     <img alt="Version" src="https://img.shields.io/npm/v/@compactjs/chatscroll.svg">
   </a>
-  <a href="https://github.com/CompactJS/chatscroll/blob/master/LICENSE" target="_blank">
+  <a href="https://github.com/CompactJS/chatscroll/blob/main/LICENSE" target="_blank">
     <img alt="License: MIT" src="https://img.shields.io/github/license/CompactJS/chatscroll" />
   </a>
 </p>
@@ -56,7 +56,7 @@ const container = document.getElementById('container');
 observe(container);
 ```
 
-Have a look at the [example](https://github.com/CompactJS/chatscroll/blob/master/example/index.html).
+Have a look at the [example](https://github.com/CompactJS/chatscroll/blob/main/example/index.html).
 
 Or checkout the [demo](https://compactjs.github.io/chatscroll).
 
@@ -96,7 +96,7 @@ Give a ⭐️ if this project helped you!
 
 ## 📝 License
 
-Distributed under the [MIT](https://github.com/CompactJS/chatscroll/blob/master/LICENSE) License.
+Distributed under the [MIT](https://github.com/CompactJS/chatscroll/blob/main/LICENSE) License.
 
 ---
 
