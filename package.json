@@ -8,10 +8,10 @@
   "unpkg": "dist/index.umd.js",
   "types": "dist/index.d.ts",
   "scripts": {
-    "build": "microbundle && npm run build:example",
-    "build:example": "microbundle build -f es -o example/dist/index.js",
-    "dev": "microbundle watch -f es -o example/dist/index.js",
-    "prepare": "npm run build",
+    "build": "microbundle --no-sourcemap && npm run build:example",
+    "build:example": "microbundle build --no-sourcemap -f es -o example/dist/index.js",
+    "dev": "microbundle watch --no-sourcemap -f es -o example/dist/index.js",
+    "prepack": "npm run build",
     "test": "echo no test defined; exit 0"
   },
   "files": [
@@ -24,7 +24,8 @@
   "keywords": [
     "javascript",
     "chat",
-    "scroll"
+    "scroll",
+    "autoscroll"
   ],
   "author": "Timo Bechtel",
   "license": "MIT",
