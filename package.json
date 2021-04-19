@@ -2,21 +2,19 @@
   "name": "@compactjs/chatscroll",
   "version": "1.0.1",
   "description": "Auto scroll to bottom",
-  "source": "src/index.js",
+  "source": "src/index.ts",
   "main": "dist/index.js",
   "module": "dist/index.module.js",
   "unpkg": "dist/index.umd.js",
-  "types": "src/index.d.ts",
+  "types": "dist/index.d.ts",
   "scripts": {
     "build": "microbundle && npm run build:example",
     "build:example": "microbundle build -f es -o example/dist/index.js",
     "dev": "microbundle watch -f es -o example/dist/index.js",
     "prepare": "npm run build",
-    "lint": "eslint src",
-    "test": "npm run lint"
+    "test": "echo no test defined; exit 0"
   },
   "files": [
-    "src",
     "dist"
   ],
   "repository": {
@@ -37,8 +35,7 @@
   "devDependencies": {
     "@semantic-release/changelog": "^5.0.1",
     "@semantic-release/git": "^9.0.0",
-    "eslint": "^7.24.0",
-    "microbundle": "^0.12.4",
+    "microbundle": "^0.13.0",
     "semantic-release": "^17.4.2"
   }
 }
